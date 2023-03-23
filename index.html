@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>Trig.js Examples</title>
+        
+        <!-- Trig JS -->
+        <script src="https://cdn.jsdelivr.net/npm/trig-js@1.2.2/dist/trig.js"></script>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono&display=swap" rel="stylesheet">
+        <!--End Fonts -->
+
+        <!-- Mobile viewport meta tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Styles -->
+        <style>
+            body{
+                margin:0px;
+                padding:0px;
+                background-color:#060606;
+                color:#FFF;
+                font-family: 'Space Mono', monospace;
+            }
+            .pageContainer{
+                max-width:100%;
+                width:100%;
+                overflow:hidden;
+            }
+            .container{
+                width:80vw;
+                min-height:100vh;
+                position:relative;
+                margin:auto;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .box{
+                position:relative;
+                display: inline-block;
+                width:auto;
+                margin:auto;
+                margin:20px;
+                padding:20px;
+                width:auto;
+            }
+            .alignCenter{
+                text-align:center;
+            }
+            h1{
+                font-family: 'Bebas Neue', cursive;
+                color: #700c0c;
+                text-shadow: 2px 2px 2px #000000;
+                font-size:72px;
+            }
+            #logo{
+                transform:scale(calc(var(--trig-logo) * 5)) translateY(calc(var(--trig-reverse-logo) / 2));
+            }
+            .gradientText{
+                -webkit-text-fill-color: transparent;
+                background: #fc4a1a;
+                background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+                background: linear-gradient(to right, #f7b733, #fc4a1a);
+                -webkit-background-clip: text;
+                background-repeat: repeat-x;
+                background-size: 400% 400%;
+                color: #aaa;
+                transition:all 0.5s ease-in-out;
+                font-size:18px;
+                font-weight:bold;
+            }
+            .gradientText:hover{
+                background: #fc4a1a;
+                background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+                background: linear-gradient(to right, #f7b733, #fc4a1a);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                background-size: 100% 100%;
+            }
+            .fadeIn{
+                opacity:0;
+            }
+            .fadeIn.trig{
+                animation: fadeIn 1s normal forwards ease-in-out;
+            }
+            @keyframes fadeIn {
+                0% {
+                    opacity:0;
+                }
+                100% {
+                    opacity:1;
+                }
+            }
+        </style>
+        <!-- End of styles -->
+
+    </head>
+    <body>
+        <div class="pageContainer">
+
+            <div class="container">
+                
+                <h1 class="logo alignCenter">Trig.JS Examples</h1>
+
+                <div class="box fadeIn" data-trig>
+
+                    <a href="examples/credits/index.html" class="gradientText">Credits roll</a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+</html>
