@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>Trig.js Example - Rolling Across</title>
+        
+        <!-- Trig JS -->
+        <script src="../../../trig/src/trig.js"></script>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono&display=swap" rel="stylesheet">
+        <!--End Fonts -->
+
+        <!-- Mobile viewport meta tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Styles -->
+        <style>
+            body{
+                margin:0px;
+                padding:0px;
+                background-color:#060606;
+                color:#FFF;
+                font-family: 'Space Mono', monospace;
+            }
+            .pageContainer{
+                max-width:100%;
+                width:100%;
+                overflow:hidden;
+            }
+            .container{
+                width:80vw;
+                min-height:100vh;
+                position:relative;
+                margin:auto;
+                display:flex;
+                align-items: center;
+                justify-content: flex-end;
+                flex-direction: column;
+            }
+            .verticalCenter{
+                justify-content: center;
+            }
+            .presents{
+                font-size:24px;
+            }
+            .title{
+                font-family: 'Bebas Neue', cursive;
+                font-size:72px;
+            }
+            h1{
+                font-family: 'Bebas Neue', cursive;
+                color: #FFF;
+                text-shadow: 2px 2px 0px #020202;
+                font-size:72px;
+            }
+            #gradientText1{
+                background: rgb(131,58,180);
+                background: linear-gradient(var(--trig-deg-gradientText1), rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgba(131,58,180,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size:calc(var(--trig-px-gradientText1) + 80px);
+                white-space: nowrap;
+            }
+            #spin {
+                font-family: Lucida Sans Unicode;
+                display: inline-block;
+                transform: rotate(var(--trig-deg-spin)) translateX(var(--trig-spin));
+                background: rgb(131,58,180);
+                background: linear-gradient(var(--trig-deg-spin), rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgba(131,58,180,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 112px;
+                font-weight: bold;
+                background-size: 1%;
+                position: relative;
+                left: var(--trig-spin);
+            }
+            .backGrey{
+                background-color:#080808;
+            }
+        </style>
+        <!-- End of styles -->
+
+    </head>
+    <body>
+        <div class="pageContainer">
+
+            <div class="container">
+
+                <div class="alignCenter">
+
+                    <div>Keep scrolling, scrolling, scrolling, scrolling...</div>
+
+                </div>
+                    <div id="spin" data-trig>&#x21bb;</div>
+
+            </div>
+
+            <div class="container backGrey">
+
+                <div id="gradientText1" class="alignCenter title" data-trig>WHAT!</div>
+
+            </div>
+            
+            <div class="container verticalCenter">
+
+                <div class="alignCenter"><div>An iDev Games Production</div></div>
+
+            </div>
+            
+        </div>
+    </body>
+</html>
