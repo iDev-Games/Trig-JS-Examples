@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Trig.js Example - Letter Spacing</title>
+        <title>Trig.js Example - Shadows</title>
         
         <!-- Trig JS -->
         <script src="https://unpkg.com/trig-js@1.3.0/dist/trig.js"></script>
@@ -41,15 +41,14 @@
             .presents{
                 font-size:24px;
             }
-            #text{
-                white-space: nowrap;
-                letter-spacing: var(--trig-px-text);
-            }
             h1{
                 font-family: 'Bebas Neue', cursive;
-                color: #700c0c;
+                color: #FFF;
                 text-shadow: 2px 2px 2px #000000;
                 font-size:72px;
+            }
+            #shadow{
+                text-shadow: var(--trig-px-shadow) var(--trig-px-shadow) 0px rgba(255,110,68,0.48);
             }
         </style>
         <!-- End of styles -->
@@ -60,7 +59,7 @@
 
             <div class="container">
 
-                <h1 id="text" class="logo alignCenter" data-trig>Trig.JS & Letter Spacing</h1>
+                <h1 id="shadow" class="alignCenter" data-trig-max="200" data-trig>Trig.JS Shadow</h1>
 
             </div>
             
