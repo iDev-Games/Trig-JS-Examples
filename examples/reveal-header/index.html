@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Trig.js Example - Article Length</title>
+        <title>Trig.js Example - Reveal Header</title>
         
         <!-- Trig JS -->
         <script src="https://cdn.jsdelivr.net/npm/trig-js/src/trig.min.js"></script>
@@ -49,13 +49,35 @@
                 height:auto;
                 display:block;
             }
-            .progress{
+            .header{
                 position: fixed;
                 background-color: #FFF;
+                color:#000;
                 width: 100%;
-                height: 40px;
+                padding:20px;
                 left: 0;
                 top: 0;
+                transition:all 0.5s ease-in-out;
+                z-index:10;
+            }
+            .trig-scroll-up .header{
+                transform:translateY(0%);
+            }
+            .trig-scroll-down .header{
+                transform:translateY(-100%);
+            }
+            .logo{
+                font-size:34px;
+            }
+            .menu, .logo{
+                display:inline-block;
+            }
+            .menu ul{ 
+                list-style:none;
+            }
+            .menu ul li{ 
+                display:inline-block;
+                padding:0px 10px;
             }
             .progressBar{
                 background-color: #F1F1F1;
@@ -81,6 +103,25 @@
     </head>
     <body>
         <div class="pageContainer">
+
+            <div class="header">
+    
+                <div class="logo">
+                    Trig.js
+                </div>
+
+                <div class="menu">
+
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Blog</li>
+                        <li>Contact Us</li>
+                    </ul>
+
+                </div>
+        
+            </div>
             
             
             <div class="container">
@@ -156,13 +197,6 @@
                 
             </div>
             
-            <div class="progress">
-        
-                <div class="progressBar">
-        
-                </div>
-        
-            </div>
         </div>
     </body>
     </html>
