@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Trig.js Example - Scroll Position</title>
+        
+        <!-- Trig JS -->
+        <script src="https://cdn.jsdelivr.net/npm/trig-js/src/trig.min.js"></script>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono&display=swap" rel="stylesheet">
+        <!--End Fonts -->
+
+        <!-- Mobile viewport meta tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Styles -->
+        <style>
+            body{
+                margin:0px;
+                padding:0px;
+                background-color:#060606;
+                color:#FFF;
+                font-family: 'Space Mono', monospace;
+            }
+            .pageContainer{
+                min-height:3000px;
+                max-width:100%;
+                width:100%;
+                overflow:hidden;
+                position:relative;
+            }
+            .container{
+                width:100%;
+                min-height:100vh;
+                position:absolute;
+                margin:auto;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            h1{
+                font-family: 'Bebas Neue', cursive;
+                color: #FFF;
+                text-shadow: 2px 2px 2px #000000;
+                font-size:72px;
+            }
+            #sink{
+                perspective-origin: 25% 75%;
+                transform-style: preserve-3d;
+                transform: translateY(var(--trig));
+            }
+            .marker{
+                position:absolute;
+                left:0px;
+                padding:10px;
+                width:100%;
+                text-align:center;
+            }
+            .marker::after{
+                content:"";
+                display: block;
+                background-color:#333;
+                width:100%;
+                height:10px;
+                position:absolute;
+                top:0;
+                left:0;
+            }
+            .marker1{
+                top:25%;
+            }
+            .marker2{
+                top:50%;
+            }
+            .marker3{
+                top:75%;
+            }
+            .trig-scroll-25 .marker1:after, .trig-scroll-50 .marker2:after, .trig-scroll-75 .marker3:after{
+                background-color:#42ad16;
+            }
+        </style>
+        <!-- End of styles -->
+
+    </head>
+    <body>
+        <div class="pageContainer">
+            
+            
+            <div class="container">
+                
+                <h1 id="sink" class="alignCenter" data-trig-max="200" data-trig>Scroll Position</h1>
+                
+            </div>
+            
+            <div class="marker marker1">25%</div>
+            <div class="marker marker2">50%</div>
+            <div class="marker marker3">75%</div>
+            
+        </div>
+    </body>
+    </html>

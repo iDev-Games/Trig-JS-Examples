@@ -49,39 +49,60 @@
                 height:auto;
                 display:block;
             }
+            header{
+                position:fixed;
+                left: 0;
+                top: 0;
+                z-index:10;
+                width:100%;
+            }
             .header{
-                position: fixed;
                 background-color: #FFF;
                 color:#000;
                 width: 100%;
                 padding:20px;
-                left: 0;
-                top: 0;
                 transition:all 0.5s ease-in-out;
-                z-index:10;
             }
-            .trig-scroll-up .header{
-                transform:translateY(0%);
-            }
-            .trig-scroll-down .header{
+            .trig-scroll-down .slide{
                 transform:translateY(-100%);
+            }
+            .trig-scroll-top .slide, .trig-scroll-bottom .slide,.trig-scroll-up .slide{
+                transform:translateY(0%);
             }
             .logo{
                 font-size:34px;
             }
             .menu, .logo{
+                width:calc(50% - 20px);
                 display:inline-block;
             }
             .menu ul{ 
                 list-style:none;
+                float: right;
+                margin: 0px;
+
             }
             .menu ul li{ 
                 display:inline-block;
                 padding:0px 10px;
             }
+            .menu ul li.mobileMenu{
+                line-height:20px;
+                font-size:32px;
+                display:none;
+            }
+            .progress{
+                background-color: #ccc;
+                width: 100%;
+                height: 10px;
+                transition: all 0.5s ease-in-out;
+                padding:40px 15px;
+            }
+            .trig-scroll-top .progress, .trig-scroll-bottom .progress{
+                opacity:0;
+            }
             .progressBar{
                 background-color: #F1F1F1;
-                margin: 15px;
                 width: calc(100% - 30px);
                 height: 10px;
             }
@@ -97,6 +118,14 @@
                 transform-style: preserve-3d;
                 transform: translateY(var(--trig));
             }
+            @media screen and (max-width: 921px) {
+                .menu ul li{
+                    display:none;
+                }
+                .menu ul li.mobileMenu{
+                    display:inline-block;
+                }
+            }
         </style>
         <!-- End of styles -->
 
@@ -104,25 +133,37 @@
     <body>
         <div class="pageContainer">
 
-            <div class="header">
-    
-                <div class="logo">
-                    Trig.js
-                </div>
+            <header>
 
-                <div class="menu">
-
-                    <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Blog</li>
-                        <li>Contact Us</li>
-                    </ul>
-
-                </div>
+                <div class="header slide">
         
-            </div>
+                    <div class="logo">
+                        Trig.js
+                    </div>
+
+                    <div class="menu">
+
+                        <ul>
+                            <li class="mobileMenu">&#8801;</li>
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Blog</li>
+                            <li>Contact Us</li>
+                        </ul>
+
+                    </div>
             
+                </div>
+
+                <div class="progress slide">
+            
+                    <div class="progressBar">
+            
+                    </div>
+                    
+                </div>
+
+            </header>
             
             <div class="container">
                 
@@ -190,11 +231,11 @@
                 </div>
                 
             </div>
-            
+
             <div class="container">
                 
                 <div class="alignCenter"><div>An iDev Games Production</div></div>
-                
+                    
             </div>
             
         </div>
