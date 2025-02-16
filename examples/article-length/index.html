@@ -16,6 +16,9 @@
 
         <!-- Styles -->
         <style>
+            :root {
+                --trig-article: 0;
+            }
             body{
                 margin:0px;
                 padding:0px;
@@ -69,6 +72,7 @@
                 width:var(--trig-article);
                 background-color:#1b8237;
                 display: block;
+                transition:width ease-out 0.3s;
             }
             #sink{
                 perspective-origin: 25% 75%;
@@ -89,7 +93,7 @@
                 
             </div>
             
-            <div class="container" id="article" data-trig-min="0" data-trig-global="true" data-trig>
+            <div class="container" id="article" data-trig-min="0" data-trig-global="true" data-trig-var="true" data-trig>
                 
                 
                 <div>
