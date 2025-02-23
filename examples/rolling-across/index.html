@@ -56,13 +56,13 @@
                 background: linear-gradient(var(--trig-deg), rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgba(131,58,180,1) 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                font-size:calc(var(--trig-px) + 80px);
+                transform: scale(calc(var(--trig) + 100%));
                 white-space: nowrap;
+                transition: transform ease-out 0.3s;
             }
             #spin {
                 font-family: Lucida Sans Unicode;
                 display: inline-block;
-                transform: rotate(var(--trig-deg));
                 background: rgb(131,58,180);
                 background: linear-gradient(var(--trig-deg), rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgba(131,58,180,1) 100%);
                 -webkit-background-clip: text;
@@ -70,9 +70,8 @@
                 font-size: 112px;
                 font-weight: bold;
                 background-size: 1%;
-                position: relative;
-                left: var(--trig);
-                transition:transform ease-out 0.3s;
+                transform: translateX(calc(var(--trig) * 10)) rotate(calc(var(--trig-deg)));
+                transition: transform ease-out 0.3s;
             }
             .backGrey{
                 background-color:#080808;
@@ -91,13 +90,13 @@
                     <div>Scroll...</div>
 
                 </div>
-                    <div id="spin" data-trig data-trig-degrees="true" data-trig-pixels="true">&#x21bb;</div>
+                    <div id="spin" data-trig data-trig-degrees="true" data-trig-var="true">&#x21bb;</div>
 
             </div>
 
             <div class="container backGrey">
 
-                <div id="gradientText1" class="alignCenter title" data-trig data-trig-degrees="true" data-trig-pixels="true">ROLL!</div>
+                <div id="gradientText1" class="alignCenter title" data-trig data-trig-degrees="true" data-trig-var="true">ROLL!</div>
 
             </div>
             

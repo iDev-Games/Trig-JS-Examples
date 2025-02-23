@@ -16,9 +16,6 @@
 
         <!-- Styles -->
         <style>
-            :root {
-                --trig-article: 0;
-            }
             body{
                 margin:0px;
                 padding:0px;
@@ -74,10 +71,11 @@
                 display: block;
                 transition:width ease-out 0.3s;
             }
-            #sink{
+            #title{
                 perspective-origin: 25% 75%;
                 transform-style: preserve-3d;
                 transform: translateY(var(--trig));
+                transition: transform ease-out 0.3s;
             }
         </style>
         <!-- End of styles -->
@@ -89,7 +87,7 @@
             
             <div class="container">
                 
-                <h1 id="sink" class="alignCenter" data-trig-max="200" data-trig>New article</h1>
+                <h1 id="title" class="alignCenter" data-trig-max="200" data-trig data-trig-var="true">New article</h1>
                 
             </div>
             

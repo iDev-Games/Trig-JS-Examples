@@ -53,16 +53,18 @@
                 background: linear-gradient(var(--trig-deg), rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgba(131,58,180,1) 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                font-size:calc(var(--trig-px) + 80px);
                 white-space: nowrap;
+                transform: scale(calc(var(--trig) + 100%));
+                transition: transform ease-out 0.3s;
             }
             #gradientText2{
                 background: rgb(131,58,180);
                 background: linear-gradient(var(--trig-deg), rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgba(131,58,180,1) 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                font-size:calc(var(--trig-px) + 80px);
                 white-space: nowrap;
+                transform: scale(calc(var(--trig) + 100%));
+                transition: transform ease-out 0.3s;
             }
             #spin {
                 font-family: Lucida Sans Unicode;
@@ -75,6 +77,7 @@
                 font-size: 112px;
                 font-weight: bold;
                 background-size: 1%;
+                transition: transform ease-out 0.3s;
             }
         </style>
         <!-- End of styles -->
@@ -91,8 +94,8 @@
 
             <div class="container">
 
-                <div id="gradientText1" class="alignCenter title" data-trig data-trig-degrees="true" data-trig-pixels="true">Gradient Solid</div>
-                <h1 id="gradientText2" class="alignCenter" data-trig data-trig-degrees="true" data-trig-pixels="true">Gradient Outline</h1>
+                <div id="gradientText1" class="alignCenter title" data-trig data-trig-degrees="true" data-trig-var="true">Gradient Solid</div>
+                <h1 id="gradientText2" class="alignCenter" data-trig data-trig-degrees="true" data-trig-var="true">Gradient Outline</h1>
 
             </div>
             

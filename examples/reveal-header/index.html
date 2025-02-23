@@ -16,9 +16,6 @@
 
         <!-- Styles -->
         <style>
-            :root {
-                --trig-article: 0;
-            }
             body{
                 margin:0px;
                 padding:0px;
@@ -67,10 +64,10 @@
                 transition:all 0.5s ease-in-out;
             }
             .trig-scroll-down .slide{
-                transform:translateY(-100%);
+                transform:translateY(calc(-100% + 10px));
             }
             .trig-scroll-top .slide, .trig-scroll-bottom .slide,.trig-scroll-up .slide{
-                transform:translateY(0%);
+                transform:translateY(0px);
             }
             .logo{
                 font-size:34px;
@@ -99,14 +96,13 @@
                 width: 100%;
                 height: 10px;
                 transition: all 0.5s ease-in-out;
-                padding:40px 15px;
-            }
-            .trig-scroll-top .progress, .trig-scroll-bottom .progress{
-                opacity:0;
+                position: absolute;
+                left: 0;
+                bottom: 0;
             }
             .progressBar{
                 background-color: #F1F1F1;
-                width: calc(100% - 30px);
+                width: calc(100%);
                 height: 10px;
             }
             .progressBar:after{
@@ -118,10 +114,11 @@
                 display: block;
                 transition:width ease-out 0.3s;
             }
-            #sink{
+            #title{
                 perspective-origin: 25% 75%;
                 transform-style: preserve-3d;
                 transform: translateY(var(--trig));
+                transition: transform ease-out 0.3s;
             }
             @media screen and (max-width: 921px) {
                 .menu ul li{
@@ -158,21 +155,22 @@
 
                     </div>
             
+                    <div class="progress">
+                
+                        <div class="progressBar">
+                
+                        </div>
+                        
+                    </div>
+
                 </div>
 
-                <div class="progress slide">
-            
-                    <div class="progressBar">
-            
-                    </div>
-                    
-                </div>
 
             </header>
             
             <div class="container">
                 
-                <h1 id="sink" class="alignCenter" data-trig-max="200" data-trig>New article</h1>
+                <h1 id="title" class="alignCenter" data-trig-max="200" data-trig data-trig-var="true">New article</h1>
                 
             </div>
             

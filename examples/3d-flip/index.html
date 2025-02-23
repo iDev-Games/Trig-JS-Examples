@@ -30,7 +30,7 @@
             }
             .container{
                 width:80vw;
-                min-height:100vh;
+                min-height:200vh;
                 position:relative;
                 margin:auto;
                 display:flex;
@@ -51,6 +51,7 @@
                 perspective-origin: 25% 75%;
                 transform-style: preserve-3d;
                 transform: rotate3d(1, 0.1, 0.1, var(--trig-deg));
+                transition: transform ease-out 0.3s;
             }
         </style>
         <!-- End of styles -->
